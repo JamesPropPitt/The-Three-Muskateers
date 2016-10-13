@@ -1,9 +1,10 @@
 # The-Three-Muskateers
-For all our uni endeavors.
-
-Message James if you notice any flaws with the setup of this repository.
-Or if you feel lonely;)
-
-Also, hopefully there will be a clear set of branches for different projects.
+ __          ________ _      _____ ____  __  __ ______   _______ ____    _______ _    _ ______   _    _ _    _ ____  
+ \ \        / /  ____| |    / ____/ __ \|  \/  |  ____| |__   __/ __ \  |__   __| |  | |  ____| | |  | | |  | |  _ \ 
+  \ \  /\  / /| |__  | |   | |   | |  | | \  / | |__       | | | |  | |    | |  | |__| | |__    | |__| | |  | | |_) |
+   \ \/  \/ / |  __| | |   | |   | |  | | |\/| |  __|      | | | |  | |    | |  |  __  |  __|   |  __  | |  | |  _ < 
+    \  /\  /  | |____| |___| |___| |__| | |  | | |____     | | | |__| |    | |  | |  | | |____  | |  | | |__| | |_) |
+     \/  \/   |______|______\_____\____/|_|  |_|______|    |_|  \____/     |_|  |_|  |_|______| |_|  |_|\____/|____/ 
+                                                                                                                   
 
 ![dawkinschan](https://pics.onsizzle.com/Facebook-Dawkins-chan-so-kawaii-042479.png)
