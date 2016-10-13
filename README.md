@@ -8,9 +8,9 @@ Also, hopefully there will be a clear set of branches for different projects.
 
 ```
 There are 4 different branches currently.
-Hub - For posts which are ready to be merged or if you want to ask a question
-James - for James
-Hannah - for Hannah
-Michail - for... You guessed it, Michail.
+**Hub** - For posts which are ready to be merged or if you want to ask a question
+**James** - for James
+**Hannah** - for Hannah
+**Michail** - for... You guessed it, Michail.
 ```
 
