@@ -5,3 +5,5 @@ Message James if you notice any flaws with the setup of this repository.
 Or if you feel lonely;)
 
 Also, hopefully there will be a clear set of branches for different projects.
+
+![dawkinschan](https://pics.onsizzle.com/Facebook-Dawkins-chan-so-kawaii-042479.png)
