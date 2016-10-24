@@ -22,9 +22,12 @@ white = (255, 255, 255)
 image = False
 spyroImg = pygame.image.load('Spyro.jpg')
 
-#defines spyro variable and blits image
+font = pygame.font.SysFont('monospace', 100)
+text = font.render('Spyro', True, (255, 255, 255))
+
 def spyro(x, y):
     window.blit(spyroImg, (x, y))
+    window.blit(text, (30, 500))
 
 #defines x, y for image placement
 x = (0)
