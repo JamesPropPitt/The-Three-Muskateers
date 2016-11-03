@@ -80,10 +80,19 @@ while not image:
         if event.type == pygame.QUIT:
             image = True
         if event.type == KEYDOWN and event.key == K_k:
+            window_width = 1280
+            window_height = 875
+            window = pygame.display.set_mode((window_width, window_height))
             kitchencats()
         if event.type == KEYDOWN and event.key == K_r:
+            window_width = 1280
+            window_height = 875
+            window = pygame.display.set_mode((window_width, window_height))
             makered()
         if event.type == KEYDOWN and event.key == K_e:
+            window_width = 640
+            window_height = 480
+            window = pygame.display.set_mode((window_width, window_height))
             edlecture()
 
     pygame.display.update()
