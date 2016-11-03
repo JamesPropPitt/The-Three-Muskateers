@@ -13,5 +13,4 @@ James - for James
 Hannah - for Hannah
 Michail - for... You guessed it, Michail.
 ```
-Useful tutorial for displaying images: https://pythonprogramming.net/displaying-images-pygame/
 
