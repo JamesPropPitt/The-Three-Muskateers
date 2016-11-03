@@ -94,6 +94,26 @@ def crusadememe():
     window.blit(Fontimg2, (120, 450))
     pygame.display.update()
 
+# Homework Meme (Press 'h' on keyboard)
+def homeworkmeme():
+
+    knight = pygame.image.load('shh.png')
+    pygame.display.set_icon(knight)
+    pygame.display.set_caption("pls stop")
+
+    # Meme text font, size, anti-aliasing and colour
+    Textfont = pygame.font.SysFont("impact", 45)
+    Fontimg = Textfont.render("When someone is about to remind", 1, white)
+    Textfont2 = pygame.font.SysFont("impact", 50)
+    Fontimg2 = Textfont2.render("the teacher about homework", 1, white)
+
+    # Loads, draws and updates the meme/display
+    Meme = pygame.image.load("shh.png")
+    window.blit(Meme, (0, 0))
+    window.blit(Fontimg, (11, 10))
+    window.blit(Fontimg2, (32, 415))
+    pygame.display.update()
+
 # set up program loop
 while not image:
     for event in pygame.event.get():
@@ -119,6 +139,11 @@ while not image:
             window_height = 533
             window = pygame.display.set_mode((window_width, window_height))
             crusadememe()
+        if event.type == KEYDOWN and event.key == K_h:
+            window_width = 644
+            window_height = 483
+            window = pygame.display.set_mode((window_width, window_height))
+            homeworkmeme()
 
     pygame.display.update()
     clock.tick(200)
