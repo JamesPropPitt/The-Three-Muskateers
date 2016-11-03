@@ -113,7 +113,7 @@ def negative():
   #      get_screen()
    # Red = 150
     #Green = 150
-    B#lue = 150
+    #Blue = 150
 #
 #
  #           PXArray[X,Y] = (Red, Green, Blue)

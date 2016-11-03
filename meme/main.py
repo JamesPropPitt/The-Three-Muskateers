@@ -106,6 +106,30 @@ def makeblue():
 
             PXArray[X, Y] = (Red, Green, Blue)
 
+# Kitchen cat meme - convert to negative (Press 'n' on keyboard)
+def negative():
+    kitchencatsImg = pygame.image.load('kitchencats.jpg')
+    font = pygame.font.SysFont('Roman', 90)
+    text = font.render('When a flatmate', True, (255, 255, 255))
+    text2 = font.render("won't wash up.", True, (255, 255, 255))
+    window.blit(kitchencatsImg, (0, 0))
+    window.blit(text, (20, 10))
+    window.blit(text2, (60, 100))
+
+    for Y in range(0, window_height):
+        for X in range(0, window_width):
+
+            PXArray = pygame.PixelArray(window)
+            Red = window.get_at((X, Y)).r
+            Green = window.get_at((X, Y)).g
+            Blue = window.get_at((X, Y)).b
+
+            Red = 255 - Red
+            Green = 255 - Green
+            Blue = 255 - Blue
+
+            PXArray[X,Y] = (Red, Green, Blue)
+
 # Ed's Lecture Meme (Press 'e' on keyboard)
 def edlecture():
 
@@ -187,6 +211,11 @@ while not image:
             window_height = 875
             window = pygame.display.set_mode((window_width, window_height))
             makeblue()
+        if event.type == KEYDOWN and event.key == K_n:
+            window_width = 1280
+            window_height = 875
+            window = pygame.display.set_mode((window_width, window_height))
+            negative()
         if event.type == KEYDOWN and event.key == K_e:
             window_width = 640
             window_height = 480
