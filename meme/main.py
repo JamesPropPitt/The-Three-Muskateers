@@ -24,7 +24,7 @@ image = False
 x = (0)
 y = (0)
 
-# Kitchen Cat Meme (Press k on keyboard)
+# Kitchen Cat Meme (Press 'k' on keyboard)
 def kitchencats():
     kitchencatsImg = pygame.image.load('kitchencats.jpg')
     font = pygame.font.SysFont('Roman', 90)
@@ -34,7 +34,7 @@ def kitchencats():
     window.blit(text, (20, 10))
     window.blit(text2, (60, 100))
 
-# Kitchen Cat Meme - Red (Press r on keyboard)
+# Kitchen Cat Meme - Red (Press 'r' on keyboard)
 def makered():
     kitchencatsImg = pygame.image.load('kitchencats.jpg')
     font = pygame.font.SysFont('Roman', 90)
@@ -58,7 +58,7 @@ def makered():
 
             PXArray[X, Y] = (Red, Green, Blue)
 
-# Ed's Lecture Meme (Press e on keyboard)
+# Ed's Lecture Meme (Press 'e' on keyboard)
 def edlecture():
 
     # Meme text font, size, anti-aliasing and colour
@@ -72,6 +72,26 @@ def edlecture():
     window.blit(Meme, (0, 0))
     window.blit(Fontimg, (25, 0))
     window.blit(Fontimg2, (53, 400))
+    pygame.display.update()
+
+# Crusading Meme (Press 'c' on keyboard)
+def crusadememe():
+
+    knight = pygame.image.load('knight.png')
+    pygame.display.set_icon(knight)
+    pygame.display.set_caption("Take back Jerusalem")
+
+    # Meme text font, size, anti-aliasing and colour
+    Textfont = pygame.font.SysFont("impact", 45)
+    Fontimg = Textfont.render("When you were supposed to go crusading", 1, white)
+    Textfont2 = pygame.font.SysFont("impact", 50)
+    Fontimg2 = Textfont2.render("but your squad ditches you", 1, white)
+
+    # Loads, draws and updates the meme/display
+    Meme = pygame.image.load("loneknight.png")
+    window.blit(Meme, (0, 0))
+    window.blit(Fontimg, (20, 10))
+    window.blit(Fontimg2, (120, 450))
     pygame.display.update()
 
 # set up program loop
@@ -94,6 +114,11 @@ while not image:
             window_height = 480
             window = pygame.display.set_mode((window_width, window_height))
             edlecture()
+        if event.type == KEYDOWN and event.key == K_c:
+            window_width = 800
+            window_height = 533
+            window = pygame.display.set_mode((window_width, window_height))
+            crusadememe()
 
     pygame.display.update()
     clock.tick(200)
