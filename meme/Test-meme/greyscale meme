@@ -1,0 +1,66 @@
+import pygame, math, sys
+from pygame.locals import *
+
+pygame.init()
+
+Width = 1080
+Height = 720
+
+Screen = pygame.display.set_mode((Width, Height), 0, 32)
+Picture1 = pygame.image.load("meme.jpg")
+Picture =pygame.transform.scale(Picture1, (Width,Height))
+
+Screen.blit(Picture, (0,0))
+pygame.display.update()
+
+White = (255, 255, 255)
+Black = (0,0,0)
+Brown = (150, 80, 50)
+
+PXArray = pygame.PixelArray(Screen)
+
+def ColourDistanceCheck(Colour1, Colour2, Tolerance):
+
+   (Red1, Green1, Blue1) = Colour1
+   (Red2, Green2, Blue2) = Colour2
+
+   ColourDistance = math.sqrt(((Red1 - Red2) ** 2) + ((Green1 - Green2) ** 2) + ((Blue1 - Blue2) ** 2))
+   if ColourDistance < Tolerance:
+       return True
+   else:
+       return False
+
+def CloseEnough():
+   for Y in range(0, Height,):
+       for X in range(0, Width, ):
+
+           Red = Screen.get_at((X, Y)).r
+           Green = Screen.get_at((X, Y)).g
+           Blue = Screen.get_at((X, Y)).b
+
+
+           CurrentColour = (Red, Green, Blue)
+
+           CloseBrown = False
+           CloseBrown = ColourDistanceCheck(CurrentColour, Brown, 100)
+
+           if CloseBrown:
+               PXArray[X, Y] = ((Red/2), Green, Blue)
+           else:
+               PXArray[X, Y] = (Red, Green, Blue)
+
+
+
+   pygame.display.update()
+
+CloseEnough()
+
+
+while True:
+
+         for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+               sys.exit()
+            elif event.type == KEYDOWN:
+             if event.key == K_ESCAPE:
+                 sys.exit()
