@@ -58,6 +58,22 @@ def makered():
 
             PXArray[X, Y] = (Red, Green, Blue)
 
+# Ed's Lecture Meme (Press e on keyboard)
+def edlecture():
+
+    # Meme text font, size, anti-aliasing and colour
+    Textfont = pygame.font.SysFont("impact", 72)
+    Fontimg = Textfont.render("When Ed's lecture is", 1, white)
+    Textfont2 = pygame.font.SysFont("impact", 60)
+    Fontimg2 = Textfont2.render("9AM monday morning", 1, white)
+
+    # Loads, draws and updates the meme/display
+    Meme = pygame.image.load("classic.jpg")
+    window.blit(Meme, (0, 0))
+    window.blit(Fontimg, (25, 0))
+    window.blit(Fontimg2, (53, 400))
+    pygame.display.update()
+
 # set up program loop
 while not image:
     for event in pygame.event.get():
@@ -67,7 +83,8 @@ while not image:
             kitchencats()
         if event.type == KEYDOWN and event.key == K_r:
             makered()
-
+        if event.type == KEYDOWN and event.key == K_e:
+            edlecture()
 
     pygame.display.update()
     clock.tick(200)
